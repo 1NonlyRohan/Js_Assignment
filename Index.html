@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website | Javascript</title>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:regular,500,600,700,800,900" rel="stylesheet" />
+    <link rel="stylesheet" href="css/glide.core.css">
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+
+<body>
+    <header>
+        <span id="header"></span>
+    </header>
+    <!-- Slider Container -->
+    <div class="container">
+        <div class="glide">
+            <!-- glide track -->
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide"><img src="Img/Hero1.png" alt="1"></li>
+                    <li class="glide__slide"><img src="Img/Hero2.png" alt="2"></li>
+                    <li class="glide__slide"><img src="Img/Hero1.png" alt="3"></li>
+                    <li class="glide__slide"><img src="Img/Hero2.png" alt="4"></li>
+                    <li class="glide__slide"><img src="Img/Hero1.png" alt="5"></li>
+                    <li class="glide__slide"><img src="Img/Hero2.png" alt="6"></li>
+                </ul>
+            </div>
+            <!-- glide arrows -->
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left ctrl1" data-glide-dir="<">◀</button>
+                <button class="glide__arrow glide__arrow--right ctrl2" data-glide-dir=">">▶</button>
+            </div>
+        </div>
+    </div>
+    <!-- Courses Container -->
+    <div class="courses-container">
+        <h2><span id="courses"></span></h2>
+        <div class="cards">
+            <div class="course-card">
+                <h3 class="animate__animated animate__backInLeft">Course 1</h3>
+                <p class="animate__animated animate__shakeX">Learn the basics of web development.</p>
+            </div>
+            <div class="course-card">
+                <h3 class="animate__animated animate__backInDown">Course 2</h3>
+                <p class="animate__animated animate__shakeX">Master advanced CSS techniques.</p>
+            </div>
+            <div class="course-card">
+                <h3 class="animate__animated animate__backInRight">Course 3</h3>
+                <p class="animate__animated animate__shakeX">Build responsive websites using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="course-card">
+                <h3 class="animate__animated animate__backInLeft">Course 4</h3>
+                <p class="animate__animated animate__shakeX">Learn the basics of React and build a simple application.</p>
+            </div>
+            <div class="course-card">
+                <h3 class="animate__animated animate__backInDown">Course 5</h3>
+                <p class="animate__animated animate__shakeX">Learn the basics of Node.js and build a simple server-side application.</p>
+            </div>
+            <div class="course-card">
+                <h3 class="animate__animated animate__backInRight">Course 6</h3>
+                <p class="animate__animated animate__shakeX">Learn the basics of Vue.js and build a simple application.</p>
+            </div>
+            <div class="course-card">
+                <h3 class="animate__animated animate__backInLeft">Course 7</h3>
+                <p class="animate__animated animate__shakeX">Learn the basics of Angular and build a simple application.</p>
+            </div>
+            <div class="course-card">
+                <h3 class="animate__animated animate__backInDown">Course 8</h3>
+                <p class="animate__animated animate__shakeX">Learn the basics of Python and build a simple application.</p>
+            </div>
+            <div class="course-card">
+                <h3 class="animate__animated animate__backInRight">Course 9</h3>
+                <p class="animate__animated animate__shakeX">Learn the basics of Java and build a simple application..</p>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Us Container -->
+    <div class="contact-us-container">
+        <h2><span id="contact"></span></h2>
+        <form action="#">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Designed by: Rohan Jaiswal.</p>
+    </footer>
+    <!-- glider.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <!-- Type.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Script.js -->
+    <script>
+        // Slider
+        var a = {
+            type: "carosuel",
+            PreView: 4,
+            breakpoints: {
+                800: {
+                    perView: 1
+                }
+            }
+        };
+        new Glide('.glide', a).mount()
+
+        // Type.js
+        var typed = new Typed("#header", {
+            strings: ["HTML, CSS & JavaScript", "Web Development", "React", "Node.js", "Vue.js", "Angular", "Python", "Java"],
+            typeSpeed: 45,
+            backSpeed: 30,
+            loop: true,
+        });
+
+        var typed = new Typed("#contact", {
+            strings: ["Contact Us"],
+            typeSpeed: 45,
+            backSpeed: 30,
+            loop: true,
+        });
+
+        var typed = new Typed("#courses", {
+            strings: ["Courses"],
+            typeSpeed: 45,
+            backSpeed: 30,
+            loop: true,
+        });
+
+    </script>
+</body>
+
+</html>
